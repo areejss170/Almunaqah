@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "المنقح",
+  "version": "1.0",
+  "description": "Automatically checks and suggests grammar corrections on any website.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["http://localhost:5000/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Grammar Checker"
+  },
+  "icons": {
+    "16": "المنقح_cropped.png"
+
+  }
+}
